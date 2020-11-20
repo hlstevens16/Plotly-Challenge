@@ -16,6 +16,8 @@ function init() {
                 dropdownMenu.append("option").text(id).property("value",id);
   });
 });
+Visuals("940");
+Metadata("940");
 };
 
 
@@ -33,7 +35,7 @@ function Visuals(sally) {
         // Create the Trace
         var traceBar = {
             x: sample_values.slice(0, 10),
-            y: otu_ids.slice(0, 10),
+            y: otu_ids.slice(0, 10).map(d => "otu_id "+d),
             type: "bar",
             text: otu_labels, 
             orientation: "h"
